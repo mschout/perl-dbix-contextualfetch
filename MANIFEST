@@ -4,3 +4,4 @@ MANIFEST.SKIP
 Makefile.PL
 lib/DBIx/ContextualFetch.pm
 t/01.t
+META.yml                                 Module meta-data (added by MakeMaker)

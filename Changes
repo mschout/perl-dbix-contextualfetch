@@ -1,5 +1,8 @@
 Revision history 
 
+1.02 Mon Dec 27 2004
+	- Fix double execute bug in tests
+
 1.01 Mon Mar 15 2004
 	- Reintroduce workaround for local $sth->{Taint} leaking
    (Thanks to Colm Dougan)
