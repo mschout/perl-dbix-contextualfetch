@@ -5,14 +5,14 @@ use strict;
 use Test::More;
 
 BEGIN {
-	eval "use DBD::SQLite2";
-	plan $@ ? (skip_all => 'needs DBD::SQLite2 for testing') : (tests => 17);
+	eval "use DBD::SQLite";
+	plan $@ ? (skip_all => 'needs DBD::SQLite for testing') : (tests => 17);
 }
 
 use File::Temp qw/tempfile/;
 my (undef, $DB) = tempfile();
 my @DSN = (
-	"dbi:SQLite2:dbname=$DB", '', '',
+	"dbi:SQLite:dbname=$DB", '', '',
 	{ AutoCommit => 1, RootClass => "DBIx::ContextualFetch" });
 
 my $dbh = DBI->connect(@DSN);

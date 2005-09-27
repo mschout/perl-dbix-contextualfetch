@@ -1,5 +1,9 @@
 Revision history 
 
+1.03 Mon Dec 27 2004
+	- Revert to DBD::SQLite (rather than SQLite2) in tests
+  - no warnings 'uninitialized'
+
 1.02 Mon Dec 27 2004
 	- Fix double execute bug in tests
 
