@@ -1,5 +1,9 @@
 Revision history 
 
+1.04 Mon Dec 05 2016
+    - fix to allow array references to execute so that Pg Array column types
+      work
+
 1.03 Mon Dec 27 2004
 	- Revert to DBD::SQLite (rather than SQLite2) in tests
   - no warnings 'uninitialized'

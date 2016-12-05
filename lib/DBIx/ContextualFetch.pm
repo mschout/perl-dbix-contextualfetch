@@ -1,6 +1,6 @@
 package DBIx::ContextualFetch;
 
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 use strict;
 use warnings;
@@ -40,6 +40,7 @@ sub _disallow_references {
 		next unless ref $_;
 		next if overload::Method($_, q{""});
 		next if overload::Method($_, q{0+});
+		next if ref $_ eq 'ARRAY';  # allow ARRAYS for ARRAY column types in DBD::Pg
 		die "Cannot call execute with a reference ($_)\n";
 	}
 }
